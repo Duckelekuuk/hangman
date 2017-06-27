@@ -1,0 +1,25 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+
+    <Canvas width="400" height="500" GridPane.columnSpan="2" GridPane.rowSpan="1" fx:id="canvas"/>
+
+    <Text fx:id="selectedWord" GridPane.rowIndex="1" GridPane.columnSpan="3" GridPane.rowSpan="1"
+          style="-fx-font-family: Raleway; -fx-font-weight: NORMAL; -fx-font-size:  20px;"/>
+
+    <TextField fx:id="input" GridPane.rowIndex="3" GridPane.columnSpan="1" GridPane.rowSpan="1"/>
+
+    <HBox alignment="BOTTOM_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button onAction="#handleGuess" fx:id="submit">Gok</Button>
+    </HBox>
+
+    <Text style="-fx-font-family: Raleway; -fx-font-weight: NORMAL; -fx-font-size:  20px;" GridPane.rowIndex="4">Feedback: </Text>
+
+    <Text fx:id="feedback" style="-fx-font-family: Raleway; -fx-font-weight: NORMAL; -fx-font-size:  20px;" GridPane.columnIndex="1" GridPane.rowIndex="4">Fout</Text>
+</GridPane>
